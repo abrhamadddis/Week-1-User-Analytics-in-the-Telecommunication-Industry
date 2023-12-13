@@ -16,7 +16,7 @@ def fetch_data(engine):
     df = None
     try:
         # Execute a query and fetch all the rows into a DataFrame
-        df = pd.read_sql_query("SELECT * FROM xdr_data LIMIT 20 ;", engine)
+        df = pd.read_sql_query("SELECT * FROM xdr_data  ;", engine)
     except Exception as error:
         print(error)
 
