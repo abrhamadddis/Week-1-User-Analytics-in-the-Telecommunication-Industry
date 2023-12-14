@@ -12,11 +12,11 @@ def create_conn():
 
     return engine
 
-def fetch_data(engine):
+def fetch_data(engine, table_name):
     df = None
     try:
         # Execute a query and fetch all the rows into a DataFrame
-        df = pd.read_sql_query("SELECT * FROM xdr_data  ;", engine)
+        df = pd.read_sql_query(f"SELECT * FROM {table_name};", engine)
     except Exception as error:
         print(error)
 
