@@ -8,6 +8,7 @@ def over_view():
 
     engine = create_conn()
     data = fetch_data(engine, "xdr_data")
+    cleaned_data = fetch_data(engine, "xdr_cleaned_data")
     
     
     st.write("#Top 10 Handsets")
@@ -17,3 +18,4 @@ def over_view():
 
     st.write("#top_5_handsets_per_manufacturer")
     create_top_5_handsets_per_manufacturer_chart(data)
+
